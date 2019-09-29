@@ -1,0 +1,159 @@
+binary: ddev
+commands:
+    auth:
+        arguments:
+            - command
+    auth-pantheon:
+        arguments:
+            - token
+    composer:
+        arguments:
+            - command
+    config:
+        options:
+            - { "name": "additional-fqdns", "type": "array" }
+            - { "name": "additional-hostnames", "type": "array" }
+            - { "name": "create-docroot" }
+            - { "name": "db-image", "type": "string" }
+            - { "name": "db-image-default" }
+            - { "name": "db-working-dir", "type": "string" }
+            - { "name": "db-working-dir-default" }
+            - { "name": "dba-image", "type": "string" }
+            - { "name": "dba-image-default" }
+            - { "name": "dba-working-dir", "type": "string" }
+            - { "name": "dba-working-dir-default" }
+            - { "name": "dbimage-extra-packages", "type": "string" }
+            - { "name": "docroot", "type": "string" }
+            - { "name": "host-db-port", "type": "integer" }
+            - { "name": "host-https-port", "type": "integer" }
+            - { "name": "host-webserver-port", "type": "integer" }
+            - { "name": "http-port", "type": "integer" }
+            - { "name": "https-port", "type": "integer" }
+            - { "name": "image-defaults" }
+            - { "name": "mailhog-port", "type": "integer" }
+            - { "name": "mariadb-version", "type": "string" }
+            - { "name": "nfs-mount-enabled" }
+            - { "name": "ngrok-args", "type": "string" }
+            - { "name": "omit-containers", "type": "string" }
+            - { "name": "php-version", "type": "string" }
+            - { "name": "phpmyadmin-port", "type": "integer" }
+            - { "name": "project-name", "type": "string" }
+            - { "name": "project-tld", "type": "string" }
+            - { "name": "project-type", "type": "string" }
+            - { "name": "show-config-location" }
+            - { "name": "timezone", "type": "string" }
+            - { "name": "upload-dir", "type": "string" }
+            - { "name": "use-dns-when-possible" }
+            - { "name": "web-image", "type": "string" }
+            - { "name": "web-image-default" }
+            - { "name": "web-working-dir", "type": "string" }
+            - { "name": "web-working-dir-default" }
+            - { "name": "webimage-extra-packages", "type": "array" }
+            - { "name": "webserver-type", "type": "string" }
+            - { "name": "working-dir-defaults" }
+            - { "name": "xdebug-enabled" }
+    debug:
+        arguments:
+            - command
+    delete:
+        arguments:
+            - project
+            - command
+        options:
+            - { "name": "all" }
+            - { "name": "clean-containers" }
+            - { "name": "omit-snapshot" }
+            - { "name": "yes" }
+    describe:
+        arguments:
+            - project
+    exec:
+        arguments:
+            - command
+        options:
+            - { "name": "dir", "type": "string" }
+            - { "name": "service", "type": "string" }
+    export-db:
+        options:
+            - { "name": "file", "type": "string" }
+            - { "name": "gzip" }
+    hostname:
+        arguments:
+            - host
+        options:
+            - { "name": "remove" }
+            - { "name": "remove-inactive" }
+    import-db:
+        options:
+            - { "name": "progress" }
+            - { "name": "extract-path" }
+            - { "name": "src", "type": "string" }
+    import-files:
+        options:
+            - { "name": "src", "type": "string" }
+            - { "name": "extract-path", "type": "string" }
+    list:
+        options:
+            - { "name": "active-only" }
+            - { "name": "continuous" }
+            - { "name": "continuous-sleep-interval", "type": "integer" }
+    logs:
+        options:
+            - { "name": "follow" }
+            - { "name": "service", type: "string", "default": "web" }
+            - { "name": "tail", type: "integer" }
+            - { "name": "time" }
+    pause:
+        options:
+            - all
+    poweroff: {}
+    pull:
+        options:
+            - { "name": "env", "type": "string" }
+            - { "name": "skip-confirmation" }
+            - { "name": "skip-db" }
+            - { "name": "skip-files" }
+            - { "name": "skip-import" }
+    restart:
+        arguments:
+            - project
+        options:
+            - all
+    restore-snapshot:
+        arguments:
+            - snapshot-name
+    sequelpro: {}
+    share:
+        arguments:
+            - project
+        options:
+            - { "name": "subdomain", "type": "string" }
+            - { "name": "use-http" }
+    snapshot:
+        arguments:
+            - project
+        options:
+            - { "name": "all" }
+            - { "name": "name", "type": "string" }
+    ssh:
+        arguments:
+            - project
+        options:
+            - { "name": "dir", "type": "string" }
+            - { "name": "service", "type": "string" }
+    start:
+        arguments:
+            - project
+        options:
+            - { "name": "all" }
+    stop:
+        arguments:
+            - project
+        options:
+            - all
+            - omit-snapshot
+            - remove-data
+            - snapshot
+            - stop-ssh-agent
+            - unlist
+    version: {}
