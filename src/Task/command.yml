@@ -2,13 +2,13 @@ binary: ddev
 commands:
     auth:
         arguments:
-            - command
+            - cmd
     auth-pantheon:
         arguments:
             - token
     composer:
         arguments:
-            - command
+            - cmd
     config:
         options:
             - { "name": "additional-fqdns", "type": "array" }
@@ -54,11 +54,11 @@ commands:
             - { "name": "xdebug-enabled" }
     debug:
         arguments:
-            - command
+            - cmd
     delete:
         arguments:
             - project
-            - command
+            - cmd
         options:
             - { "name": "all" }
             - { "name": "clean-containers" }
@@ -69,7 +69,7 @@ commands:
             - project
     exec:
         arguments:
-            - command
+            - cmd
         options:
             - { "name": "dir", "type": "string" }
             - { "name": "service", "type": "string" }
