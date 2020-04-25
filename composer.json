@@ -12,7 +12,7 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "consolidation/robo": "^1.0",
+        "consolidation/robo": "^1.0|^2.0",
         "droath/robo-command-builder":  "~0.0.1"
     },
     "autoload": {
