@@ -2,10 +2,9 @@ binary: ddev
 commands:
     auth:
         arguments:
-            - cmd
-    auth-pantheon:
-        arguments:
-            - token
+            - ssh
+            - pantheon
+            - ddev-live
     composer:
         arguments:
             - cmd
@@ -23,6 +22,7 @@ commands:
             - { "name": "dba-working-dir", "type": "string" }
             - { "name": "dba-working-dir-default" }
             - { "name": "dbimage-extra-packages", "type": "string" }
+            - { "name": "disable-settings-management" }
             - { "name": "docroot", "type": "string" }
             - { "name": "host-db-port", "type": "integer" }
             - { "name": "host-https-port", "type": "integer" }
@@ -157,3 +157,4 @@ commands:
             - stop-ssh-agent
             - unlist
     version: {}
+    xdebug: {}
