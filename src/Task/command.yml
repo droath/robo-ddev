@@ -12,7 +12,12 @@ commands:
         options:
             - { "name": "additional-fqdns", "type": "array" }
             - { "name": "additional-hostnames", "type": "array" }
+            - { "name": "bind-all-interfaces" }
+            - { "name": "composer-root", "type": "string" }
+            - { "name": "composer-root-default", "type": "string" }
+            - { "name": "composer-version", "type": "string" }
             - { "name": "create-docroot" }
+            - { "name": "database", "type": "string" }
             - { "name": "db-image", "type": "string" }
             - { "name": "db-image-default" }
             - { "name": "db-working-dir", "type": "string" }
@@ -23,19 +28,25 @@ commands:
             - { "name": "dba-working-dir-default" }
             - { "name": "dbimage-extra-packages", "type": "string" }
             - { "name": "disable-settings-management" }
+            - { "name": "fail-on-hook-fail"}
             - { "name": "docroot", "type": "string" }
             - { "name": "host-db-port", "type": "integer" }
+            - { "name": "host-dba-port", "type": "string" }
             - { "name": "host-https-port", "type": "integer" }
             - { "name": "host-webserver-port", "type": "integer" }
             - { "name": "http-port", "type": "integer" }
             - { "name": "https-port", "type": "integer" }
             - { "name": "image-defaults" }
+            - { "name": "mailhog-https-port", "type": "string" }
             - { "name": "mailhog-port", "type": "integer" }
             - { "name": "mariadb-version", "type": "string" }
             - { "name": "nfs-mount-enabled" }
+            - { "name": "mutagen-enabled" }
             - { "name": "ngrok-args", "type": "string" }
             - { "name": "omit-containers", "type": "string" }
             - { "name": "php-version", "type": "string" }
+            - { "name": "no-project-mount" }
+            - { "name": "nodejs-version", "type": "string" }
             - { "name": "phpmyadmin-port", "type": "integer" }
             - { "name": "project-name", "type": "string" }
             - { "name": "project-tld", "type": "string" }
@@ -44,6 +55,7 @@ commands:
             - { "name": "timezone", "type": "string" }
             - { "name": "upload-dir", "type": "string" }
             - { "name": "use-dns-when-possible" }
+            - { "name": "web-environment", "type": "string" }
             - { "name": "web-image", "type": "string" }
             - { "name": "web-image-default" }
             - { "name": "web-working-dir", "type": "string" }
