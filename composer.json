@@ -4,15 +4,16 @@
     "keywords": ["ddev", "robo", "task runner"],
     "type": "robo-tasks",
     "license": "MIT",
+    "prefer-stable": true,
+    "minimum-stability": "dev",
     "authors": [
         {
             "name": "Travis Tomka",
             "email": "underoathosx@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
-        "consolidation/robo": "^1.0",
+        "consolidation/robo": "^1.0||^2.0||^3.0",
         "droath/robo-command-builder":  "~0.0.1"
     },
     "autoload": {
