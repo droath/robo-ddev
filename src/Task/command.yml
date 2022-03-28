@@ -169,4 +169,6 @@ commands:
             - stop-ssh-agent
             - unlist
     version: {}
-    xdebug: {}
+    xdebug:
+        arguments:
+            - state

@@ -323,6 +323,18 @@ trait loadTasks
     }
 
     /**
+     * The DDev xdebug command.
+     *
+     * @param string|null The path to the ddev binary.
+     *
+     * @return CollectionBuilder
+     */
+    protected function taskDDevXdebug($pathToDdev = null)
+    {
+        return $this->runCommandBuilder('xdebug', $pathToDdev);
+    }
+
+    /**
      * Run the command builder implementation.
      *
      * @param $action
