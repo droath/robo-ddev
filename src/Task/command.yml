@@ -9,6 +9,8 @@ commands:
         arguments:
             - cmd
     config:
+        arguments:
+            - global
         options:
             - { "name": "additional-fqdns", "type": "array" }
             - { "name": "additional-hostnames", "type": "array" }
